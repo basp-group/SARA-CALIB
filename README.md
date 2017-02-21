@@ -1,1 +1,0 @@
-# joint-img-dde-calibration
