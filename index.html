@@ -15,7 +15,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Joint DDE calibration and imaging in RI</h1>
+        <h1>DDE self-calibration in RI</h1>
         <p>MATLAB source code</p>
 
         <p class="view"><a href="https://github.com/basp-group/joint-img-dde-calibration">View the Project on GitHub <small>basp-group/joint-img-dde-calibration</small></a></p>
@@ -32,40 +32,59 @@
        <h2>A non-convex optimization algorithm for joint DDE calibration and imaging in radio interferometry</h2>
        <!--<p>The code will be made available soon.</p>-->
        </section>
-<!--
-      <section>
-        <h3>
 
+<section>
+<h3>
 
 <a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h3>
 
-<p>Motivated by the planned construction of the Square Kilometre Array, which will become the largest sensor ever built by humankind and will acquire unprecedented amounts of data in radio astronomy, we developed two convex optimisation algorithms for solving the radio interferometric imaging problem. They are tailored for big-data and employ parallel and distributed computations to achieve scalability, in terms of memory and computational requirements.
-The code made available here represents a proof of concept MATLAB implementation of the two proposed algorithms.</p>
+<p>Radio-interferometric imaging aims to estimate an unknown sky intensity image from degraded
+observations, acquired through an antenna array. In the theoretical case of a perfectly calibrated
+array, it has been shown that solving the corresponding imaging problem by iterative algorithms
+based on convex optimization and compressive sensing theory can be competitive with classical
+algorithms such as CLEAN. However, in practice, antenna-based gains are unknown and have
+to be calibrated. Future radio telescopes, such as the SKA, aim at improving imaging resolution
+and sensitivity by orders of magnitude. At this precision level, the direction-dependency of the
+gains must be accounted for, and radio-interferometric imaging can be understood as a blind
+deconvolution problem. In this context, the underlying minimization problem is non-convex,
+and adapted techniques have to be designed. In this work, leveraging recent developments
+in non-convex optimization, we propose the first joint calibration and imaging method in
+radio interferometry, with proven convergence guarantees. Our approach, based on a blockcoordinate
+forward-backward algorithm, jointly accounts for visibilities and suitable priors
+on both the image and the direction-dependent effects (DDEs). As demonstrated in recent
+works, sparsity remains the prior of choice for the image, while DDEs are modelled as smooth
+functions of the sky, i.e. spatially band-limited. Finally, we show through simulations the
+efficiency of our method, for the reconstruction of both point sources images and complex
+extended sources. </p>
+<p>The code made available here represents a proof of concept MATLAB implementation of the proposed algorithm.</p>
 
 <h3>
 <a id="authors" class="anchor" href="#authors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors</h3>
 
 <ul>
-<li>Dr. Alexandru Onose</li>
-<li>Dr. Rafael E. Carrillo</li>
 <li>Dr. Audrey Repetti</li>
-<li>Dr. Jason D. McEwen</li>
-<li>Dr. Jean-Philippe Thiran</li>
-<li>Dr. Jean-Christophe Pesquet</li>
-<li>Dr. Yves Wiaux</li>
+<li>Mrs. Jasleen Birdi</li>
+<li>Dr. Arwa Dabbech</li>
+<li>Prof. Yves Wiaux</li>
 </ul>
 
 <h3>
 <a id="article" class="anchor" href="#article" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Article</h3>
 
-<p>A. Onose, R. E. Carrillo, A. Repetti, J. D. McEwen, J.-P. Thiran, J.-C. Pesquet, and Y. Wiaux - <em><strong>Scalable splitting algorithms for big-data interferometric imaging in the SKA era</strong>,
-MNRAS <a href="http://dx.doi.org/10.1093/mnras/stw1859">doi:10.1093/mnras/stw1859</a> first published online August 1, 2016</em></p>
-      </section>
-      <footer>
+<p>A. Repetti, J. Birdi, A. Dabbech, and Y. Wiaux - 
+<em><strong>A non-convex optimization algorithm for joint DDE calibration and imaging in radio interferometry</strong>,
+<a href="https://arxiv.org/abs/1701.03689">Arxiv preprint</a>, Jan. 2017</em></p>
+
+
+</section>
+      
+<!--
+
+<footer>
         <p>This project is maintained by <a href="https://github.com/basp-group">basp-group</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
+</footer>
+</div>
     <script src="javascripts/scale.fix.js"></script>
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -76,7 +95,7 @@ MNRAS <a href="http://dx.doi.org/10.1093/mnras/stw1859">doi:10.1093/mnras/stw185
               var pageTracker = _gat._getTracker("UA-82326814-1");
             pageTracker._trackPageview();
             } catch(err) {}
-          </script>
+     </script>
 
   </body>
 </html>
