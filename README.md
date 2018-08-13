@@ -1,4 +1,4 @@
-# SARA-CALIB: joint imaging and DDE calibration
+# SARA-CALIB: Joint imaging and DDE calibration
 
 **Associated papers:**
 > A. Repetti, J. Birdi, A. Dabbech, and Y. Wiaux, <a href="https://arxiv.org/abs/1701.03689">Non-convex optimization for self-calibration of direction-dependent effects in radio interferometric imaging</a>, <i>Monthly Notices of the Royal Astronomical Society, vol. 470, no. 4, pp. 3981-4006</i>, Oct. 2017.
